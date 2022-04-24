@@ -1,4 +1,3 @@
-from http import client
 import threading
 import socket
 
@@ -44,5 +43,5 @@ class Client:
     
     def write(self):
         while True:
-            msg = "{}:{}".format(self.nick, input('> '))
+            msg = "{}:{}".format(self.nick, input(''))
             self._client_.send(msg.encode('ascii'))
